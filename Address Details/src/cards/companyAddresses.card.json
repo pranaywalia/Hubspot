@@ -1,8 +1,0 @@
-{
-  "targetTypes": ["COMPANY"],
-  "title": "Company Addresses",
-  "fetch": {
-    "function": "fetchAddresses"
-  },
-  "actions": []
-}
