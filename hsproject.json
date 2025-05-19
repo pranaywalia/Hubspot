@@ -1,23 +1,23 @@
 {
   "name": "address-details",
-  "srcDir": "src",
   "version": "1.0.0",
-  "description": "",
-  "author": "",
+  "description": "CRM extension to manage and display multiple company addresses",
+  "author": "Pranay Walia",
   "license": "MIT",
-  "scopes": [],
+  "scopes": ["crm.objects.companies.read"],
+  "srcDir": "src",
   "extensions": {
     "crm": {
-      "cards": {
-        "address-details-card": {
-          "path": "src/app/cards/address-details/index.jsx"
+      "cards": [
+        {
+          "file": "app/cards/companyAddresses.card.json"
         }
-      },
-      "functions": {
-        "address-details-function": {
-          "path": "src/app/functions/address-details/index.js"
+      ],
+      "functions": [
+        {
+          "file": "app/functions/fetchAddresses.js"
         }
-      }
+      ]
     }
   }
 }
