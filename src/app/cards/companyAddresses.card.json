@@ -1,8 +1,15 @@
 {
-  "targetTypes": ["COMPANY"],
-  "title": "Company Addresses",
+  "title": "Addresses",
   "fetch": {
-    "function": "fetchAddresses"
+    "function": "app/functions/fetchAddresses.js"
   },
-  "actions": []
+  "context": {
+    "objectType": "COMPANY"
+  },
+  "sections": [
+    {
+      "type": "text",
+      "text": "Test card for multiple addresses."
+    }
+  ]
 }
