@@ -1,21 +1,21 @@
 {
   "name": "address-details",
   "version": "1.0.0",
+  "platformVersion": "2025.1",
   "description": "CRM extension to manage and display multiple company addresses",
   "author": "Pranay Walia",
   "license": "MIT",
   "scopes": ["crm.objects.companies.read"],
-  "srcDir": "src",
   "extensions": {
     "crm": {
       "cards": [
         {
-          "file": "app/cards/companyAddresses.card.json"
+          "file": "src/app/cards/companyAddresses.card.json"
         }
       ],
       "functions": [
         {
-          "file": "app/functions/fetchAddresses.js"
+          "file": "src/app/functions/fetchAddresses.js"
         }
       ]
     }
