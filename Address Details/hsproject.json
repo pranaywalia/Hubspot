@@ -1,5 +1,5 @@
 {
-  "name": "hubspot-crm-addresses",
+  "name": "address-details",
   "version": "1.0.0",
   "description": "CRM extension to manage and display multiple company addresses",
   "author": "Pranay Walia",
@@ -9,12 +9,12 @@
     "crm": {
       "cards": [
         {
-          "file": "src/cards/companyAddresses.card.json"
+          "file": "src/app/cards/companyAddresses.card.json"
         }
       ],
       "functions": [
         {
-          "file": "src/functions/fetchAddresses.js"
+          "file": "src/app/functions/fetchAddresses.js"
         }
       ]
     }
