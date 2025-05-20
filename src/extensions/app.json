@@ -7,7 +7,7 @@
     "crm": {
       "cards": [
         {
-          "file": "extensions/overlay-example-card.json"
+          "file": "extensions/companyAddresses.card.json"
         }
       ]
     }
