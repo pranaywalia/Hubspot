@@ -7,13 +7,7 @@
     "crm": {
       "cards": [
         {
-          "file": "companyAddresses.card.json"
-        }
-      ],
-      "react": [
-        {
-          "name": "companyAddressesModule",
-          "entry": "components/CompanyAddresses.jsx"
+          "file": "extensions/companyAddresses.card.json"
         }
       ]
     }
