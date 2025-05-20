@@ -3,15 +3,14 @@
   "data": {
     "title": "Company Addresses",
     "location": "crm.record.sidebar",
-    "module": {
-      "source": "components/CompanyAddresses.jsx",
-      "title": "Company Addresses"
-    },
     "objectTypes": [
       {
         "name": "company"
       }
     ],
+    "module": {
+      "source": "components/CompanyAddresses.jsx"
+    },
     "properties": [
       "billing_address_1_street",
       "billing_address_1_city",
@@ -46,7 +45,4 @@
     ]
   },
   "meta": {
-    "author": "Pranay Walia",
-    "version": "1.0.0"
-  }
-}
+    "ver
