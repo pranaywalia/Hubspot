@@ -2,42 +2,39 @@
   "type": "crm-card",
   "data": {
     "title": "Company Addresses",
-    "location": "company_sidebar",
+    "location": "crm.record.sidebar",
     "objectTypes": [
-      { "name": "COMPANY" }
+      { "name": "company" }
     ],
-    "module": "companyAddressesModule",
+    "module": {
+      "source": "components/CompanyAddresses.jsx"
+    },
     "properties": [
       "billing_address_1_street",
       "billing_address_1_city",
       "billing_address_1_state",
       "billing_address_1_zip",
       "billing_address_1_country",
-
       "billing_address_2_street",
       "billing_address_2_city",
       "billing_address_2_state",
       "billing_address_2_zip",
       "billing_address_2_country",
-
       "billing_address_3_street",
       "billing_address_3_city",
       "billing_address_3_state",
       "billing_address_3_zip",
       "billing_address_3_country",
-
       "shipping_address_1_street",
       "shipping_address_1_city",
       "shipping_address_1_state",
       "shipping_address_1_zip",
       "shipping_address_1_country",
-
       "shipping_address_2_street",
       "shipping_address_2_city",
       "shipping_address_2_state",
       "shipping_address_2_zip",
       "shipping_address_2_country",
-
       "shipping_address_3_street",
       "shipping_address_3_city",
       "shipping_address_3_state",
@@ -47,6 +44,6 @@
   },
   "meta": {
     "version": "1.0.0",
-    "author": "Pranay Walia"
+    "author": "Your Name"
   }
 }
