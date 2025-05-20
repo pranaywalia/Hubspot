@@ -1,38 +1,40 @@
 import React from "react";
+import { Card, Property, Section } from "@hubspot/ui-extensions-sdk/renderer";
 
-export default function CompanyAddresses({ properties }) {
-  // Helper to render one address block
-  const renderAddress = (label, prefix) => {
+export default function CompanyAddressesCard({ data }) {
+  const { properties } = data;
+
+  // Helper function to render one address block
+  const renderAddress = (prefix) => {
     const street = properties[`${prefix}_street`];
     const city = properties[`${prefix}_city`];
     const state = properties[`${prefix}_state`];
     const zip = properties[`${prefix}_zip`];
     const country = properties[`${prefix}_country`];
 
-    // If none of the fields exist, skip rendering this block
-    if (!street && !city && !state && !zip && !country) return null;
+    if (!street && !city && !state && !zip && !country) {
+      return null;
+    }
 
     return (
-      <div style={{ marginBottom: "1rem" }}>
-        <strong>{label}</strong>
-        <div>{street || "-"}</div>
-        <div>
-          {(city || "-")}, {(state || "-")} {(zip || "-")}
-        </div>
-        <div>{country || "-"}</div>
-      </div>
+      <Section title={prefix.replace(/_/g, " ").toUpperCase()}>
+        <Property label="Street" value={street || "-"} />
+        <Property label="City" value={city || "-"} />
+        <Property label="State" value={state || "-"} />
+        <Property label="Zip" value={zip || "-"} />
+        <Property label="Country" value={country || "-"} />
+      </Section>
     );
   };
 
   return (
-    <div style={{ padding: "1rem", fontFamily: "Arial, sans-serif", fontSize: "14px" }}>
-      {renderAddress("Billing Address 1", "billing_address_1")}
-      {renderAddress("Billing Address 2", "billing_address_2")}
-      {renderAddress("Billing Address 3", "billing_address_3")}
-
-      {renderAddress("Shipping Address 1", "shipping_address_1")}
-      {renderAddress("Shipping Address 2", "shipping_address_2")}
-      {renderAddress("Shipping Address 3", "shipping_address_3")}
-    </div>
+    <Card title="Company Addresses">
+      {renderAddress("billing_address_1")}
+      {renderAddress("billing_address_2")}
+      {renderAddress("billing_address_3")}
+      {renderAddress("shipping_address_1")}
+      {renderAddress("shipping_address_2")}
+      {renderAddress("shipping_address_3")}
+    </Card>
   );
 }
