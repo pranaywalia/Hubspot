@@ -1,8 +1,15 @@
 {
-  "name": "Address Details",
+  "name":  "Address Details",
   "description": "Company Addresses extension",
-  "public": false,
   "scopes": ["crm.objects.companies.read", "crm.objects.companies.write"],
-  "targetObjectTypes": ["company"],
-  "targetSelection": "MULTIPLE"
+  "public": false,
+  "extensions": {
+    "crm": {
+      "cards": [
+        {
+          "file": "extensions/overlay-example-card.json"
+        }
+      ]
+    }
+  }
 }
