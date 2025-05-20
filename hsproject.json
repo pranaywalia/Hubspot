@@ -1,5 +1,5 @@
 {
   "name": "address-details",
-  "projectType": "extensions",
-  "srcdir": "src"
+  "srcDir": "src",
+  "projectType": "crm-cards"
 }
