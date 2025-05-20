@@ -1,47 +1,38 @@
 import React from "react";
-import { Card, Grid, Property } from "@hubspot/ui-extensions";
+import { useEntity, Text } from "@hubspot/ui-extensions";
 
-const CompanyAddresses = ({ properties }) => {
+export default function CompanyAddresses() {
+  const { entity } = useEntity();
+
   return (
-    <Card>
-      <Grid columns={2} gap={3}>
-        {[
-          "billing_address_1_street",
-          "billing_address_1_city",
-          "billing_address_1_state",
-          "billing_address_1_zip",
-          "billing_address_1_country",
-          "billing_address_2_street",
-          "billing_address_2_city",
-          "billing_address_2_state",
-          "billing_address_2_zip",
-          "billing_address_2_country",
-          "billing_address_3_street",
-          "billing_address_3_city",
-          "billing_address_3_state",
-          "billing_address_3_zip",
-          "billing_address_3_country",
-          "shipping_address_1_street",
-          "shipping_address_1_city",
-          "shipping_address_1_state",
-          "shipping_address_1_zip",
-          "shipping_address_1_country",
-          "shipping_address_2_street",
-          "shipping_address_2_city",
-          "shipping_address_2_state",
-          "shipping_address_2_zip",
-          "shipping_address_2_country",
-          "shipping_address_3_street",
-          "shipping_address_3_city",
-          "shipping_address_3_state",
-          "shipping_address_3_zip",
-          "shipping_address_3_country",
-        ].map((prop) => (
-          <Property property={prop} key={prop} />
-        ))}
-      </Grid>
-    </Card>
-  );
-};
+    <div style={{ fontFamily: "Arial, sans-serif", padding: "10px" }}>
+      <h2>Billing Addresses</h2>
+      {[1, 2, 3].map((num) => (
+        <div key={`billing-${num}`} style={{ marginBottom: "10px" }}>
+          <strong>Billing Address {num}</strong>
+          <div><Text property={`billing_address_${num}_street`} /></div>
+          <div>
+            <Text property={`billing_address_${num}_city`} />,{" "}
+            <Text property={`billing_address_${num}_state`} />{" "}
+            <Text property={`billing_address_${num}_zip`} />
+          </div>
+          <div><Text property={`billing_address_${num}_country`} /></div>
+        </div>
+      ))}
 
-export default CompanyAddresses;
+      <h2>Shipping Addresses</h2>
+      {[1, 2, 3].map((num) => (
+        <div key={`shipping-${num}`} style={{ marginBottom: "10px" }}>
+          <strong>Shipping Address {num}</strong>
+          <div><Text property={`shipping_address_${num}_street`} /></div>
+          <div>
+            <Text property={`shipping_address_${num}_city`} />,{" "}
+            <Text property={`shipping_address_${num}_state`} />{" "}
+            <Text property={`shipping_address_${num}_zip`} />
+          </div>
+          <div><Text property={`shipping_address_${num}_country`} /></div>
+        </div>
+      ))}
+    </div>
+  );
+}

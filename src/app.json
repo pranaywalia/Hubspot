@@ -9,12 +9,6 @@
         {
           "file": "extensions/companyAddresses.card.json"
         }
-      ],
-      "react": [
-        {
-          "name": "companyAddressesModule",
-          "source": "extensions/components/CompanyAddresses.jsx"
-        }
       ]
     }
   }
