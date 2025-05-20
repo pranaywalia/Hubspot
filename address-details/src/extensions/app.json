@@ -1,6 +1,0 @@
-{
-  "extensionName": "Address Details Extension",
-  "description": "Shows multiple company addresses on the CRM record.",
-  "appId": "address-details",
-  "version": "1.0.0"
-}
