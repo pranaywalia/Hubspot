@@ -8,9 +8,14 @@
     "crm": {
       "cards": [
         {
-          "file": "src/companyAddresses.card.json"
+          "file": "extensions/companyAddresses.card.json"
         }
       ]
+    }
+  },
+  "modules": {
+    "companyAddressesModule": {
+      "source": "extensions/components/CompanyAddresses.jsx"
     }
   }
 }
