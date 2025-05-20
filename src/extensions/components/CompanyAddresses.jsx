@@ -1,35 +1,73 @@
-import React from 'react';
-import { Card, Text, Grid, Col } from '@hubspot/ui-extensions';
+import React from "react";
+import { Card, Property, useRecord } from "@hubspot/ui-extensions";
 
-export default function CompanyAddresses({ context }) {
-  const { object } = context;
-  const properties = object.properties;
+export default function CompanyAddresses() {
+  const record = useRecord();
 
-  function renderAddress(prefix) {
-    return (
-      <div style={{ marginBottom: '12px' }}>
-        <Text as="h5">{prefix.replace('_', ' ').toUpperCase()}</Text>
-        <Grid columns={1}>
-          <Col>
-            <Text>Street: {properties[prefix + '_street'] || 'N/A'}</Text>
-            <Text>City: {properties[prefix + '_city'] || 'N/A'}</Text>
-            <Text>State: {properties[prefix + '_state'] || 'N/A'}</Text>
-            <Text>Zip: {properties[prefix + '_zip'] || 'N/A'}</Text>
-            <Text>Country: {properties[prefix + '_country'] || 'N/A'}</Text>
-          </Col>
-        </Grid>
-      </div>
-    );
+  const billing1 = {
+    street: record.get("billing_address_1_street"),
+    city: record.get("billing_address_1_city"),
+    state: record.get("billing_address_1_state"),
+    zip: record.get("billing_address_1_zip"),
+    country: record.get("billing_address_1_country"),
+  };
+
+  const billing2 = {
+    street: record.get("billing_address_2_street"),
+    city: record.get("billing_address_2_city"),
+    state: record.get("billing_address_2_state"),
+    zip: record.get("billing_address_2_zip"),
+    country: record.get("billing_address_2_country"),
+  };
+
+  const billing3 = {
+    street: record.get("billing_address_3_street"),
+    city: record.get("billing_address_3_city"),
+    state: record.get("billing_address_3_state"),
+    zip: record.get("billing_address_3_zip"),
+    country: record.get("billing_address_3_country"),
+  };
+
+  const shipping1 = {
+    street: record.get("shipping_address_1_street"),
+    city: record.get("shipping_address_1_city"),
+    state: record.get("shipping_address_1_state"),
+    zip: record.get("shipping_address_1_zip"),
+    country: record.get("shipping_address_1_country"),
+  };
+
+  const shipping2 = {
+    street: record.get("shipping_address_2_street"),
+    city: record.get("shipping_address_2_city"),
+    state: record.get("shipping_address_2_state"),
+    zip: record.get("shipping_address_2_zip"),
+    country: record.get("shipping_address_2_country"),
+  };
+
+  const shipping3 = {
+    street: record.get("shipping_address_3_street"),
+    city: record.get("shipping_address_3_city"),
+    state: record.get("shipping_address_3_state"),
+    zip: record.get("shipping_address_3_zip"),
+    country: record.get("shipping_address_3_country"),
+  };
+
+  function formatAddress(addr) {
+    if (!addr.street && !addr.city && !addr.state && !addr.zip && !addr.country) {
+      return "N/A";
+    }
+    return `${addr.street || ""}, ${addr.city || ""}, ${addr.state || ""} ${addr.zip || ""}, ${addr.country || ""}`.replace(/(, )+/g, ", ").replace(/^, |, $/g, "").trim();
   }
 
   return (
-    <Card>
-      {renderAddress('billing_address_1')}
-      {renderAddress('billing_address_2')}
-      {renderAddress('billing_address_3')}
-      {renderAddress('shipping_address_1')}
-      {renderAddress('shipping_address_2')}
-      {renderAddress('shipping_address_3')}
+    <Card title="Company Addresses">
+      <Property label="Billing Address 1" value={formatAddress(billing1)} />
+      <Property label="Billing Address 2" value={formatAddress(billing2)} />
+      <Property label="Billing Address 3" value={formatAddress(billing3)} />
+
+      <Property label="Shipping Address 1" value={formatAddress(shipping1)} />
+      <Property label="Shipping Address 2" value={formatAddress(shipping2)} />
+      <Property label="Shipping Address 3" value={formatAddress(shipping3)} />
     </Card>
   );
 }
