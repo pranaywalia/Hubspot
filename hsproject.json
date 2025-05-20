@@ -1,5 +1,5 @@
 {
   "name": "address-details",
   "projectType": "extensions",
-  "source": "src"
+  "srcdir": "src"
 }
