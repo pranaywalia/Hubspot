@@ -1,6 +1,8 @@
 {
-  "name": "Address Details Extension",
-  "description": "A CRM extension to view and manage multiple addresses for a company.",
+  "name": "Address Details",
+  "description": "Company Addresses extension",
+  "public": false,
   "scopes": ["crm.objects.companies.read", "crm.objects.companies.write"],
-  "public": false
+  "targetObjectTypes": ["company"],
+  "targetSelection": "MULTIPLE"
 }
