@@ -1,5 +1,6 @@
 {
   "name": "address-details",
   "srcDir": "src",
-  "projectType": "crm-cards"
+  "projectType": "crm-cards",
+  "platformVersion": "2025.1"
 }
