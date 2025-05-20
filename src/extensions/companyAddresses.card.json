@@ -1,10 +1,14 @@
 {
-  "type": "CRM_CARD_V2",
+  "type": "crm-card",
   "data": {
     "title": "Company Addresses",
     "location": "company_sidebar",
     "module": "companyAddressesModule",
-    "objectTypes": ["COMPANY"],
+    "objectTypes": [
+      {
+        "name": "company"
+      }
+    ],
     "properties": [
       "billing_address_1_street",
       "billing_address_1_city",
@@ -42,9 +46,5 @@
       "shipping_address_3_zip",
       "shipping_address_3_country"
     ]
-  },
-  "meta": {
-    "author": "Pranay Walia",
-    "version": "1.0.0"
   }
 }
