@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
 const companyAddressesModule = () => {
   return (
     <div>
-      <h2>Company Addresses</h2>
-      {/* Your UI here */}
+      <h3>Company Addresses Card</h3>
+      <p>This is a custom card extension for company addresses.</p>
     </div>
   );
 };
