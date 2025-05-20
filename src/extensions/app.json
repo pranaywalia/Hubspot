@@ -1,6 +1,6 @@
 {
-  "name": "My CRM Extension",
-  "description": "Custom CRM card for company addresses",
+  "name": "Address Details",
+  "description": "Company Addresses extension",
   "scopes": ["crm.objects.companies.read", "crm.objects.companies.write"],
   "public": false,
   "extensions": {
@@ -8,6 +8,12 @@
       "cards": [
         {
           "file": "extensions/companyAddresses.card.json"
+        }
+      ],
+      "react": [
+        {
+          "path": "extensions/components/CompanyAddresses.jsx",
+          "name": "companyAddressesModule"
         }
       ]
     }
