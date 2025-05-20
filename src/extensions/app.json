@@ -1,8 +1,16 @@
 {
-  "name": "Address Details",
-  "description": "Company Addresses extension",
-  "public": false,
+  "name": "Address Details Card",
+  "description": "This app adds address details card to company records",
+  "uid": "address_details_app",
   "scopes": ["crm.objects.companies.read", "crm.objects.companies.write"],
-  "targetObjectTypes": ["company"],
-  "targetSelection": "MULTIPLE"
+  "public": false,
+  "extensions": {
+    "crm": {
+      "cards": [
+        {
+          "file": "src/app/companyAddresses.card.json"
+        }
+      ]
+    }
+  }
 }
