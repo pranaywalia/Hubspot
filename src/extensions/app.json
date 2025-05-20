@@ -11,7 +11,7 @@
     "crm": {
       "cards": [
         {
-          "file": "extensions/companyAddresses.card.json"
+          "file": "companyAddresses.card.json"
         }
       ]
     }
