@@ -1,20 +1,10 @@
 import React from "react";
 
-const CompanyAddresses = ({ addresses }) => {
-  if (!addresses || addresses.length === 0) {
-    return <div>No addresses found.</div>;
-  }
-
+const CompanyAddresses = ({ object }) => {
   return (
-    <div style={{ fontFamily: "Arial", padding: "10px" }}>
-      <h3>Company Addresses</h3>
-      <ul>
-        {addresses.map((addr, index) => (
-          <li key={index}>
-            <strong>{addr.label}</strong>: {addr.street}, {addr.city}, {addr.zip}, {addr.country}
-          </li>
-        ))}
-      </ul>
+    <div>
+      <h3>Company Address Info</h3>
+      <p>Company ID: {object.id}</p>
     </div>
   );
 };
