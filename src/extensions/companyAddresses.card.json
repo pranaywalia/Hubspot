@@ -1,0 +1,31 @@
+{
+  "label": "Company Addresses",
+  "data": {
+    "fetch": {
+      "url": "https://api.hubspot.com/crm/v3/objects/companies/{objectId}",
+      "method": "GET"
+    }
+  },
+  "template": {
+    "component": "components/CompanyAddresses.jsx",
+    "properties": {
+      "addresses": [
+        {
+          "label": "Head Office",
+          "street": "123 Main St",
+          "city": "Munich",
+          "zip": "80331",
+          "country": "Germany"
+        },
+        {
+          "label": "Warehouse",
+          "street": "45 Industrial Road",
+          "city": "Hamburg",
+          "zip": "20095",
+          "country": "Germany"
+        }
+      ]
+    }
+  },
+  "targets": ["crm.record.sidebar"]
+}
