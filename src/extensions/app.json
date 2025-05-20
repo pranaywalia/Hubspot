@@ -1,6 +1,6 @@
 {
-  "name": "Address Details",
-  "description": "Company Addresses extension",
+  "name": "My CRM Extension",
+  "description": "Custom CRM card for company addresses",
   "scopes": ["crm.objects.companies.read", "crm.objects.companies.write"],
   "public": false,
   "extensions": {
