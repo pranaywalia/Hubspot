@@ -12,8 +12,8 @@
       ],
       "react": [
         {
-          "path": "extensions/components/CompanyAddresses.jsx",
-          "name": "companyAddressesModule"
+          "name": "companyAddressesModule",
+          "path": "extensions/components/CompanyAddresses.jsx"
         }
       ]
     }
