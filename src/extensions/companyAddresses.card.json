@@ -1,14 +1,10 @@
 {
-  "type": "crm-card",
+  "type": "CRM_CARD_V2",
   "data": {
     "title": "Company Addresses",
     "location": "company_sidebar",
     "module": "companyAddressesModule",
-    "objectTypes": [
-      {
-        "name": "COMPANY"
-      }
-    ],
+    "objectTypes": ["COMPANY"],
     "properties": [
       "billing_address_1_street",
       "billing_address_1_city",
