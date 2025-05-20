@@ -1,5 +1,5 @@
 {
-  "name": "address-details",
-  "srcDir": "src",
-  "platformVersion": "2025.1"
+  "name": "my-crm-extension",
+  "platformVersion": "2025.1",
+  "srcDir": "src"
 }
