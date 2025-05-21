@@ -9,7 +9,7 @@
     },
     "objectTypes": [
       {
-        "name": "companies"
+        "name": "company"
       }
     ]
   }
