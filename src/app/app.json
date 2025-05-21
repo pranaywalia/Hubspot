@@ -1,7 +1,7 @@
 {
   "name": "address-details",
   "description": "App to show company addresses",
-  "public": true,
+  "public": false,
   "uid": "Address_Detail_app",
 "scopes": ["crm.objects.companies.read", "crm.objects.companies.write"],
 
