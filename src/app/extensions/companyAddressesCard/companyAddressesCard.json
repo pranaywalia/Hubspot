@@ -2,7 +2,7 @@
   "type": "crm-card",
   "data": {
     "title": "Company Addresses",
-    "uid": "company_addresses_card",
+    "uid": "company_addresses",
     "location": "crm.record.tab",
     "module": {
       "file": "index.jsx"
