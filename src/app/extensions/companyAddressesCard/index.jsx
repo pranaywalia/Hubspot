@@ -1,8 +1,27 @@
 import React from 'react';
-import CompanyAddresses from './components/CompanyAddresses';
+import {
+  Heading,
+  Button,
+  Text,
+  Flex,
+  hubspot,
+} from '@hubspot/ui-extensions';
+import { CompanyAddresses } from './components/CompanyAddresses';
 
-export default function CompanyAddressesCard(props) {
-  // You can access record data via props
+hubspot.extend(({ actions }) => <CompanyAddressesCard actions={actions} />);
 
-  return <CompanyAddresses />;
-}
+const CompanyAddressesCard = ({ actions }) => {
+  return (
+    <Flex direction="column" gap="small">
+      <Heading>Company Addresses</Heading>
+      <Text>Edit the addresses associated with this company.</Text>
+
+      <Button
+        variant="primary"
+        overlay={<CompanyAddresses actions={actions} />}
+      >
+        Edit Addresses
+      </Button>
+    </Flex>
+  );
+};
