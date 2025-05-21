@@ -8,9 +8,11 @@ import {
 } from '@hubspot/ui-extensions';
 import { CompanyAddresses } from './components/CompanyAddresses';
 
-hubspot.extend(({ actions }) => <CompanyAddressesCard actions={actions} />);
+hubspot.extend(({ actions, context }) => (
+  <CompanyAddressesCard actions={actions} context={context} />
+));
 
-const CompanyAddressesCard = ({ actions }) => {
+const CompanyAddressesCard = ({ actions, context }) => {
   return (
     <Flex direction="column" gap="small">
       <Heading>Company Addresses</Heading>
@@ -18,7 +20,7 @@ const CompanyAddressesCard = ({ actions }) => {
 
       <Button
         variant="primary"
-        overlay={<CompanyAddresses actions={actions} />}
+        overlay={<CompanyAddresses actions={actions} context={context} />}
       >
         Edit Addresses
       </Button>
