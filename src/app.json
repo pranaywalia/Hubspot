@@ -3,7 +3,8 @@
   "description": "App to show company addresses",
   "public": false,
   "uid": "Address_Detail_app",
-"scopes": ["crm.objects.companies.read", "crm.objects.companies.write"],
-"extensions": {
-  "crm.cards": ["company_addresses_card"]
+  "scopes": ["crm.objects.companies.read", "crm.objects.companies.write"],
+  "extensions": {
+    "crm.cards": ["company_addresses_card"]
+  }
 }
